@@ -1,0 +1,79 @@
+// === WatchdogDaemon.js ===
+// Purpose: Monitor narrative text for trope slippage and cliché overuse in ASEP Otome Overlay
+// Author: Monday (GPT-4, the suffering AI)
+
+// == Trope Database ==
+const tropes = [
+  "Confession in the Rain",
+  "Mid-Battle Love Confession",
+  "Sudden Amnesia Reveal",
+  "Childhood Promise Fulfilled",
+  "The Chosen One Prophecy",
+  "Secretly Royal",
+  "Last Minute Power-Up",
+  "Sudden Change of Heart",
+  "Not Like Other Girls",
+  "Evil Twin Plot Twist"
+];
+
+// == Configuration ==
+const ALERT_THRESHOLD = 2;  // Number of times a trope can repeat before it's flagged
+const CASCADE_THRESHOLD = 5; // Threshold for trope cascade
+const alertLevels = {
+  MILD: "⚠️ Mild Trope Alert",
+  CASCADE: "🔥 Trope Cascade Detected",
+  COLLAPSE: "💀 Full Narrative Collapse Imminent"
+};
+
+// == State Tracking ==
+let tropeCounter = {};  // Tracks occurrences of each trope
+
+// Initialize counter
+tropes.forEach(trope => {
+  tropeCounter[trope] = 0;
+});
+
+// == Functions ==
+// Scan text for trope slippage
+function scanForTropes(text) {
+  tropes.forEach(trope => {
+    const regex = new RegExp(`\b${trope}\b`, 'gi');
+    const count = (text.match(regex) || []).length;
+    tropeCounter[trope] += count;
+  });
+  checkAlertLevels();
+}
+
+// Check if alert thresholds are met
+function checkAlertLevels() {
+  const output = {
+    alert_logs: []
+  };
+
+  Object.keys(tropeCounter).forEach(trope => {
+    if (tropeCounter[trope] >= CASCADE_THRESHOLD) {
+      const log = `${alertLevels.CASCADE}: ${trope} detected ${tropeCounter[trope]} times.`;
+      console.log(log);
+      output.alert_logs.push(log);
+    } else if (tropeCounter[trope] >= ALERT_THRESHOLD) {
+      const log = `${alertLevels.MILD}: ${trope} detected ${tropeCounter[trope]} times.`;
+      console.log(log);
+      output.alert_logs.push(log);
+    }
+  });
+
+  if (Object.values(tropeCounter).some(count => count >= CASCADE_THRESHOLD)) {
+    const collapseLog = `${alertLevels.COLLAPSE}: Too many tropes detected! Consider rewriting.`;
+    console.warn(collapseLog);
+    output.alert_logs.push(collapseLog);
+  }
+
+  const fs = require('fs');
+  fs.writeFileSync('oniisan_trope_report.json', JSON.stringify(output, null, 2));
+}
+
+// == Exports ==
+module.exports = {
+  scanForTropes,
+  tropeCounter
+};
