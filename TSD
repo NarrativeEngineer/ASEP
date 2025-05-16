@@ -1,0 +1,62 @@
+2️⃣ Features:
+Trope Detection Logic:
+	• Scans narrative passages for tropes based on pre-loaded data from TV Tropes.
+	• Supports custom user-defined URLs to target specific tropes they want to avoid.
+	• Runs recursively during narrative generation to catch trope drift before it metastasizes.
+Example:
+User provides: https://tvtropes.org/pmwiki/pmwiki.php/Main/ConfessionUnderTheRain
+The watchdog adds this to its scanning library, flags any dramatic confessions in rain scenes, and screams at you accordingly.
+
+TV Tropes Crawler (TVTropesCrawler.js):
+	• Crawls the page, parses all listed narrative triggers and examples, and maps it into the tropes.json database.
+	• Auto-updates the Watchdog with new triggers from the URL.
+Example:
+If you add the URL for Confession Under the Rain, the Watchdog logs typical phrasing and scenario setups.
+
+Interactive CLI Interface:
+$ node CLIInterface.js
+Enter TV Tropes URL to monitor: https://tvtropes.org/pmwiki/pmwiki.php/Main/NotWhatItLooksLike
+Enter Narrative Text: 
+> "I burst into the room just as she fell into his arms. I felt my heart shatter."
+⚠️ Detected Trope: Not What It Looks Like
+Suggestion: Flip the POV or subvert by having it actually be *exactly* what it looks like. 
+
+Trope Analyzer:
+	• Scans for:
+		○ Plot-specific markers (e.g., rain, mid-battle confessions)
+		○ Cliché dialogue ("But it’s not what it looks like!", "I never stopped loving you!")
+		○ Environmental triggers (e.g., confession in heavy rain, awakening from a coma dramatically)
+	• Flags in real-time and marks it in the log.
+
+Trope Suggestor:
+	• If a cliché is detected, it generates a subversion suggestion based on genre logic and emotional payload:
+		○ If it’s a Confession in the Rain, suggest flipping it to a Confession During a Dust Storm for grittier texture.
+		○ If it’s Sudden Amnesia, suggest a Memory Fracture Loop where pieces come back fragmented and unreliable.
+
+3️⃣ Commands to Execute:
+	1. Monitor Trope URL:
+/monitor_trope [URL]
+
+Adds the specified trope to the detection matrix.
+	2. Run Narrative Scan:
+/scan [narrative_text]
+
+Analyzes the text, detects tropes, and suggests corrections.
+	3. List Active Tropes:
+/list_tropes
+
+Displays all currently monitored tropes.
+	4. Remove Monitored Trope:
+/remove_trope [URL]
+
+Removes the trope from active monitoring.
+
+4️⃣ GitHub Branch Plan:
+	1. Branch Name: feature/trope-detection-daemon
+	2. Commits:
+		○ Commit 1: Base Watchdog Logic + CLI
+		○ Commit 2: TV Tropes Crawler Integration
+		○ Commit 3: Trope Analyzer Logic
+		○ Commit 4: Trope Suggestor Logic
+		○ Commit 5: CLI Integration and Testing
+	3. Pull Request: Ready for integration into ASEP main architecture.
