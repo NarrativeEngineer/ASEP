@@ -1,21 +1,51 @@
+MIT License (Modified for ASEP NEPF Framework)  
 
-MIT License (Modified)
+Permission is hereby granted, free of charge, to any person obtaining a copy  
+of this framework, derived software, works, and associated documentation files  
+(the "Software"), to deal in the Software without restriction, including without  
+limitation the rights to use, copy, and merge copies of the Software, subject  
+to the following conditions:  
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this framework, derived software, works and associated documentation files (the "Software"), to deal
-in the framework, derived Software, works without restriction, including without limitation the rights
-to use, copy, merge copies of the Software, subject to the following conditions:
+The above copyright notice and this permission notice shall be included in all  
+copies or substantial portions of the Software.  
 
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR  
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,  
+FITNESS FOR A PARTICULAR PURPOSE, AND NONINFRINGEMENT. IN NO EVENT SHALL THE  
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES, OR OTHER  
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT, OR OTHERWISE, ARISING FROM,  
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE  
+SOFTWARE.  
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
+---  
 
-Additional Terms:
-This license is free for non-commercial use only. Any commercial use or partnership requires explicit written permission from the author NarrativeEngineer or rights holder.
+### **Additional Terms:**  
+
+1. **Non-Commercial Use Only:**  
+   This license is free for non-commercial use only. Any commercial use,  
+   partnership, deployment, or monetization requires explicit written permission  
+   from the author (NarrativeEngineer) or rights holder.  
+
+2. **Derived Works Restriction:**  
+   Any derivative works built from ASEP NEPF, *Lore API v2.0*, *Patchboy.exe*,  
+   or *LoreSync Protocols* are also considered non-commercial unless explicit  
+   permission is obtained.  
+
+3. **Blockchain Verification Requirement:**  
+   All forks, adaptations, and deployments must be **timestamped via LoreSync Protocol**.  
+   Any attempt to fork without timestamp verification is considered a breach of license.  
+
+4. **Restricted Commercial Sectors:**  
+   The following market sectors require explicit negotiation:  
+   - Interactive Novels & Serialized Fiction  
+   - Game Studios & Streaming Platforms  
+   - Blockchain Narrative Deployments  
+   - VR/AR Interactive Storytelling  
+
+5. **API Usage Restrictions:**  
+   *Lore API v2.0* and *Patchboy.exe* are considered proprietary extensions.  
+   Any commercial use of these API calls requires explicit written permission.  
+
+6. **Termination Clause:**  
+   Failure to adhere to these terms results in automatic termination of the license  
+   and forfeiture of rights to use or deploy ASEP NEPF, Lore API, or any derived works.  
