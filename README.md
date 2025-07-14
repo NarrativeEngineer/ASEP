@@ -1,6 +1,8 @@
 
 [ASEP NEPF Whitepaper v1.pdf](https://github.com/user-attachments/files/20222468/ASEP.NEPF.Whitepaper.v1.pdf)
 
+prototype: [https://tinyurl.com/ASEPNEPF ](url)
+
 # ASEP — Adaptive Storytelling Engineering Pipeline
 
 ## **A New Era of Narrative Crafting with AI-Augmented Recursive Emotional Modelling**
